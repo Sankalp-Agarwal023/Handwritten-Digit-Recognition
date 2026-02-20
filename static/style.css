@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=1920&q=80") no-repeat center center/cover;
+    position: relative;
+}
+
+/* Dark Overlay for readability */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 15, 30, 0.75);
+    backdrop-filter: blur(3px);
+    z-index: 0;
+}
+
+/* Wrapper */
+.main-wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+/* Glass Card */
+.card {
+    width: 850px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    border-radius: 25px;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 60px rgba(0, 255, 255, 0.3);
+}
+
+/* Left Content */
+.left-content {
+    width: 50%;
+}
+
+h1 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* File Input */
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border: none;
+    background: rgba(255,255,255,0.15);
+    color: white;
+    cursor: pointer;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 15px;
+    border: none;
+    background: linear-gradient(90deg, #7f00ff, #e100ff);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #e100ff;
+}
+
+/* Result */
+.result {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 15px;
+    background: linear-gradient(90deg, #00f2fe, #4facfe);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+}
+
+/* Right Image */
+.right-content {
+    width: 45%;
+    text-align: center;
+}
+
+.right-content img {
+    width: 100%;
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+
+.preview-container {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#previewImage {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 15px;
+    border: 2px solid #00f2fe;
+    display: none;
+    background: rgba(255,255,255,0.1);
+    padding: 5px;
+}
